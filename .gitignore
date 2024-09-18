@@ -1,0 +1,12 @@
+# venv
+.venv/
+
+# workspaces settings
+.vscode/
+.idea/
+.prettierrc
+.editorconfig
+
+# static files
+static/
+static_my_project/
