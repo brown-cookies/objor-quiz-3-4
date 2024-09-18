@@ -23,7 +23,7 @@
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card shadow-2-strong">
                         <div class="card-body p-5 text-center">
-                            <form method="post" action="{% url 'login' %}">
+                            <form method="post">
                                 {% csrf_token %}
                                 {% if form.non_field_errors %}
                                     <div class="alert alert-danger">
@@ -41,10 +41,7 @@
                                     {{ form.password }}
                                     <label class="form-label" for="{{ form.password.id_for_label }}">Password</label>
                                 </div>
-                                <button data-mdb-button-init
-                                        data-mdb-ripple-init
-                                        class="btn btn-primary btn-lg btn-block"
-                                        type="submit">Login</button>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
                             </form>
                         </div>
                     </div>

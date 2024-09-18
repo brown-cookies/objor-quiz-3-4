@@ -12,6 +12,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("login/", views.login_page, name="login"),
     path("logout/", views.logout_page, name="logout"),
+    path("profile/", views.profile_page, name="profile"),
+    path("update-profile/", views.ProfileUpdateView.as_view(), name="update-profile"),
     path("register/", views.register_page, name="register"),
 ]
 

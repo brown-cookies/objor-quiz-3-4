@@ -57,4 +57,5 @@ class LoginUserForm(forms.Form):
         if username and password:
             user = authenticate(username=username, password=password)
             if user is None:
-                raise forms.ValidationError("Invalid username or password.")
+                raise forms.ValidationError("Invalid username or password")
+        return cleaned_data
