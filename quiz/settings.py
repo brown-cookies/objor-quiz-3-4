@@ -64,7 +64,7 @@ WSGI_APPLICATION = "quiz.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": BASE_DIR / ("dev.sqlite3" if DEBUG else "prod.sqlite3"),
     }
 }
 
@@ -105,7 +105,7 @@ USE_TZ = True
 
 STATIC_URL = "static_my_project/"
 STATIC_ROOT = BASE_DIR / "static"
-STATICFILES_DIRS = [BASE_DIR / "static_my_project", BASE_DIR / "components"]
+STATICFILES_DIRS = [BASE_DIR / "static_my_project"]
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"

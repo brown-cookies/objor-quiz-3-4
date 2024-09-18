@@ -1,6 +1,9 @@
 # venv
 .venv/
 
+# unnecessary cache
+**/*/__pycache__
+
 # workspaces settings
 .vscode/
 .idea/
@@ -10,3 +13,9 @@
 # static files
 static/
 static_my_project/
+
+# sqlite (development)
+dev.sqlite3
+
+# sqlite (development)
+prod.sqlite3
